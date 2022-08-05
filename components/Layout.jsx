@@ -2,23 +2,23 @@ import Head from 'next/head';
 import { Box } from '@chakra-ui/react';
 
 import Footer from './Footer';
-import NavTest from './NavTest';
+import Navbar from './Navbar';
 
 export default function Layout({ children }) {
   return (
-    <>
+    <Box px={5}>
       <Head>
         <title>Real Estate</title>
       </Head>
-      <Box  m='auto'>
+      <Box m='auto'>
         <header>
-          <NavTest/>
+          <Navbar />
         </header>
         <main>{children}</main>
         <footer>
           <Footer />
         </footer>
       </Box>
-    </>
+    </Box>
   );
 }

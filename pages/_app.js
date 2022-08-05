@@ -2,8 +2,14 @@ import Router from 'next/router';
 import Head from 'next/head';
 import NProgress from 'nprogress';
 import { ChakraProvider } from '@chakra-ui/react';
-
 import Layout from '../components/Layout';
+import '../styles.css';
+import "swiper/css/bundle";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+import 'react-alice-carousel/lib/alice-carousel.css';
+
 
 function MyApp({ Component, pageProps }) {
   NProgress.configure({ showSpinner: false });

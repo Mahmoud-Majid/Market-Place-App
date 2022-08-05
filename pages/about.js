@@ -10,16 +10,11 @@ import {
   Tag,
   Wrap,
   WrapItem,
-  SpaceProps,
   useColorModeValue,
   Container,
   VStack,
 } from '@chakra-ui/react';
 
-// interface IBlogTags {
-//   tags: Array<string>;
-//   marginTop?: SpaceProps['marginTop'];
-// }
 
 const BlogTags = (props) => {
   return (
@@ -35,10 +30,6 @@ const BlogTags = (props) => {
   );
 };
 
-// interface BlogAuthorProps {
-//   date: Date;
-//   name: string;
-// }
 
 export const BlogAuthor = (props) => {
   return (

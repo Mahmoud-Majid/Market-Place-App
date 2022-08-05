@@ -36,20 +36,26 @@ export default function Category({ url, title, link}) {
           href={link}
         >
         <Box
-        as={motion.div}
-        animate={{ scale: flag ? 1.1 : 1 }}
+         as={motion.div}
+         animate={{ scale: flag ? 1.1 : 1 }}
          role={'group'}
          p={6}
          maxW={'200px'}
          w={'full'}
          rounded={'lg'}
-         backgroundImage={`url(${url})`}
          onMouseEnter={setFlag.on}
          onMouseLeave={setFlag.off}
          height={'150'}
-        //  backgroundPosition="center"
-         backgroundRepeat="no-repeat"
-         backgroundSize="cover"
+          style={{
+            cursor: 'pointer',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundImage: `url(${url})`, 
+            borderRadius: '10px',
+            boxShadow: '2xl',
+            transition: 'all 0.2s ease-in-out',
+          }}
         />
         </Link>
         <Stack pt={10} align={'center'}>
