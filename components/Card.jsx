@@ -10,20 +10,6 @@ import {
   Badge,
 } from '@chakra-ui/react';
 
-// {
-//   property: {
-//     coverPhoto,
-//     price,
-//     rentFrequency,
-//     rooms,
-//     title,
-//     baths,
-//     area,
-//     agency,
-//     isVerified,
-//     externalID,
-//   },
-// }
 export default function Card({ image }) {
   const [flag, setFlag] = useBoolean();
 

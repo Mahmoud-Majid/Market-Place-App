@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import YouTubeVideo from './YouTubeVideo';
 import { Box } from '@chakra-ui/react';
+import useWindowSize from '../utils/useWindowSize';
 
 const videos = [
   'hxEUblpGbOI',
@@ -16,10 +17,12 @@ const videos = [
   'DD7nVTbFbfo',
 ];
 export default function VideoSlider() {
+  const { width } = useWindowSize();
+
   return (
     <Box>
       <Swiper
-        slidesPerView={4}
+        slidesPerView={width < 750 ? '1' : width < 1100 ? '2' : '4'}
         spaceBetween={30}
         slidesPerGroup={1}
         loop={true}

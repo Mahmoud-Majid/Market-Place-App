@@ -7,6 +7,7 @@ const YouTubeVideo = ({ id, height, width }) => {
     width: width,
     playerVars: {
       autoplay: 0,
+      origin: 'http://localhost:3000',
     },
   };
   const onReady = (event) => {
