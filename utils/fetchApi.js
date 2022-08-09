@@ -1,12 +1,12 @@
 import axios from "axios";
 
 export const baseUrl = 'https://bayut.p.rapidapi.com';
-
+const API_KEY = process.env.REACT_APP_API_KEY;
 export const fetchApi = async (url) => {
   const { data } = await axios.get((url), {
     headers: {
       'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
-      'X-RapidAPI-Key': '76a126652cmshac1c5efd9ee12dfp13880djsn94a9ce8ac508',
+      'X-RapidAPI-Key': API_KEY,
     },
   });
   return data;

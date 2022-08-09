@@ -36,13 +36,15 @@ export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, link
 
 
 const Home = ({ propertiesForSale, propertiesForRent }) => (
-  <Box>
-    <Carousel />
-    <Categories />
-    <ImagesSlider propsForSale={propertiesForSale} />
-    <VideoSlider />
-    <VideoBanner />
-  </Box>
+  <>
+    <Box >
+      <Carousel />
+      <Categories />
+      <ImagesSlider propsForSale={propertiesForSale} />
+      <VideoSlider />
+      <VideoBanner />
+    </Box>
+  </>
 );
 
 export async function getStaticProps() {
