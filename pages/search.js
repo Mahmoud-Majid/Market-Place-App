@@ -14,7 +14,8 @@ const Search = ({ properties }) => {
   const router = useRouter();
 
   return (
-    <Box>
+    <Box
+    >
       <Flex
         onClick={() => setSearchFilters(!searchFilters)}
         cursor='pointer'
@@ -31,12 +32,17 @@ const Search = ({ properties }) => {
         <Icon paddingLeft='2' w='7' as={BsFilter} />
       </Flex>
       {searchFilters && <SearchFilters />}
-      <Text fontSize='2xl' p='4' fontWeight='bold'>
+      <Text fontSize='2xl' p='4' fontWeight='bold'
+        textAlign={['center']}
+      >
         Properties {router.query.purpose}
       </Text>
-      <Flex flexWrap='wrap'>
+      <Flex flexWrap='wrap'
+        justifyContent='center'
+      >
         {properties.map((property) => <Property property={property} key={property.id} />)}
       </Flex>
+      {/* if no properties found */}
       {properties.length === 0 && (
         <Flex justifyContent='center' alignItems='center' flexDir='column' marginTop='5' marginBottom='5'>
           <Image src={noresult} />
