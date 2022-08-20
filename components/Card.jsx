@@ -9,6 +9,7 @@ import {
   useBoolean,
   Badge,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 
 export default function Card({ image }) {
   const [flag, setFlag] = useBoolean();
@@ -51,20 +52,22 @@ export default function Card({ image }) {
             },
           }}
         >
-          <Image
-            rounded={'lg'}
-            height={'full'}
-            width={282}
-            scale={flag ? 1.1 : 1}
-            objectFit={'cover'}
-            src={image.coverPhoto.url}
-            onMouseEnter={setFlag.on}
-            onMouseLeave={setFlag.off}
-            style={{
-              transform: `${flag ? `scale(1.1)` : `scale(1)`}`,
-              transition: 'all .3s ease',
-            }}
-          />
+          <Link href={`/property/${image.externalID}`} passHref>
+            <Image
+              rounded={'lg'}
+              height={'full'}
+              width={282}
+              scale={flag ? 1.1 : 1}
+              objectFit={'cover'}
+              src={image.coverPhoto.url}
+              onMouseEnter={setFlag.on}
+              onMouseLeave={setFlag.off}
+              style={{
+                transform: `${flag ? `scale(1.1)` : `scale(1)`}`,
+                transition: 'all .3s ease',
+              }}
+            />
+          </Link>
         </Box>
         <Badge rounded='full' px='2' fontSize='0.8em' colorScheme='blue'>
           Sale

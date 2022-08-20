@@ -17,7 +17,7 @@ import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 const Links = [
   ['Home', ''],
   ['Projects', 'projects'],
-  ['Services', 'services'],
+  ['Search', 'search'],
   ['About', 'about'],
   ['Contact', 'contact'],
 ];
